@@ -1,0 +1,2 @@
+# django-swapi
+Swapi API
