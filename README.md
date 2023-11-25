@@ -14,10 +14,10 @@ Open your Terminal, and type: `$ git clone git@github.com:sac95verma/django-swap
  
 ## Setup
 - Install python using `brew install python`
-- Install virtual env using `pip install pipenv`
+- Install virtual env using `pip3 install pipenv`
 - Run `pipenv shell`
 - Install the requirements using `pipenv install`
-- Once dependencies are updated. Rename the `db.sqlite3.example` to remove .example
+- Once dependencies are updated. Rename the `db.sqlite3.example` to `db.sqlite3`
 - Use `python manage.py migrate` to create the tables
 - Use `python manage.py crontab add` to add the crons
 - Use `python manage.py runserver 9001` to start the app.
