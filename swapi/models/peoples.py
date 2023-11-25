@@ -1,0 +1,20 @@
+from django.db import models
+
+class StarWarsPeople(models.Model):
+    reference = models.IntegerField(default=1, unique=True)
+    name = models.CharField(max_length=255)
+    height = models.CharField(max_length=5)
+    mass = models.CharField(max_length=5)
+    hair_color = models.CharField(max_length=50)
+    skin_color = models.CharField(max_length=50)
+    eye_color = models.CharField(max_length=50)
+    birth_year = models.CharField(max_length=10)
+    gender = models.CharField(max_length=10)
+    homeworld = models.URLField()
+    created = models.DateTimeField()
+    edited = models.DateTimeField()
+    url = models.URLField()
+    films = models.JSONField(null=True)
+    species = models.JSONField(null=True)
+    starships = models.JSONField(null=True)
+    vehicles = models.JSONField(null=True)
