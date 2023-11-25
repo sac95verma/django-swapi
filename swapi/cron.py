@@ -6,7 +6,7 @@ from swapi.models import StarWarsPeople
 
 
 
-SWAPI_BASE_URL = config('SWAPI_BASE_URL', default='')
+SWAPI_BASE_URL = 'https://swapi.dev/api/people/'
 PAGE_SIZE = 10 #max size available was 10
 
 def ScrapeSwapiPeopleApi():
