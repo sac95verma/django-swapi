@@ -16,5 +16,6 @@ class SecretTokenMiddleware:
             else:
                 # Token is missing or invalid, reject the request
                 response = HttpResponseForbidden()
-
+            return response
+        
         return self.get_response(request)
