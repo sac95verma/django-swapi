@@ -7,22 +7,21 @@ Open your Terminal, and type: `$ git clone git@github.com:sac95verma/django-swap
 ## Functions
 - performs scraping of https://swapi.dev at a configurable interval
 - API endpoints to:
-  - View the characters information GET`http://localhost:9001/swapi/people`
-  - Search the characters information GET`http://localhost:9001/swapi/people?search=lu`
-  - Rate the character from 1 to 5 POST`http://localhost:9001/swapi/people/rate`
-  - View top n rated characters GET`http://localhost:9001/swapi/people/top-rated/:count`
+  - View the characters information GET`http://localhost:8000/swapi/people`
+  - Search the characters information GET`http://localhost:8000/swapi/people?search=lu`
+  - Rate the character from 1 to 5 POST`http://localhost:8000/swapi/people/rate`
+  - View top n rated characters GET`http://localhost:8000/swapi/people/top-rated/:count`
  
+## Pre requisite
+- Docker : To install use `brew install docker`
+
 ## Setup
-- Install python using `brew install python`
-- Install virtual env using `pip3 install pipenv`
-- Run `pipenv shell`
-- Install the requirements using `pipenv install`
-- Once dependencies are updated. Rename the `db.sqlite3.example` to `db.sqlite3`
-- Use `python manage.py migrate` to create the tables
-- Use `python manage.py crontab add` to add the crons
-- Use `python manage.py runserver 9001` to start the app.
+- cd django-swapi/
+- Run command on terminal `docker compose up -d`
+- 
 
 ## For running tests
+- Run `docker exec -it {docker-image-name} bash
 - Run `python manage.py test swapi`
 
 ## Architecture
