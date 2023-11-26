@@ -6,7 +6,7 @@ class SecretTokenMiddleware:
 
     def __call__(self, request):
         secret_token = 'your_secret_token'  # Replace with your actual secret token
-        excluded_paths = ['/admin/']
+        excluded_paths = ['/admin/', '/swapi/people/rate']
         if request.path not in excluded_paths:
         # Check if the secret token is present in the Authorization header
             authorization_header = request.headers.get('Authorization', '')
