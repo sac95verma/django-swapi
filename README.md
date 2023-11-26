@@ -10,6 +10,7 @@ Open your Terminal, and type: `$ git clone git@github.com:sac95verma/django-swap
   - View the characters information GET`http://localhost:8000/swapi/people`
   - Search the characters information GET`http://localhost:8000/swapi/people?search=lu`
   - Rate the character from 1 to 5 POST`http://localhost:8000/swapi/people/rate`
+    - Needs `Authorization: Token your_secret_token` for sending post request
   - View top n rated characters GET`http://localhost:8000/swapi/people/top-rated/:count`
  
 ## Pre requisite
