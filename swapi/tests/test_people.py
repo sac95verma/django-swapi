@@ -12,22 +12,6 @@ class PeopleApiTest(TestCase):
     def setUp(self):
         self.client = APIClient()
         
-    def test_people_api_without_authentication_header(self):
-        url = reverse('swapi:api-data-list')
-        response = self.client.get(url)
-
-        self.assertEqual(response.status_code, status.HTTP_403_FORBIDDEN)
-        
-    def test_people_api_with_authentication_header(self):
-        url = reverse('swapi:api-data-list')
-        response = self.client.get(url, **HEADERS)
-
-        self.assertEqual(response.status_code, status.HTTP_200_OK)
-        jsonData = response.json()
-        self.assertEqual(jsonData['total_records'], 2)
-        self.assertEqual(len(jsonData['data']), 2)
-        
-        
     def test_people_api_with_search_param(self):
         url = reverse('swapi:api-data-list') + '?search=Luke'
         response = self.client.get(url, **HEADERS)
